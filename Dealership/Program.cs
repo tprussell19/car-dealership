@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Hosting;
 using Dealership.Models;
+using System.IO;
 
 namespace Dealership
 {
@@ -8,6 +10,17 @@ namespace Dealership
   {
     public static void Main()
     {
+      {
+        var host = new WebHostBuilder()
+          .UseKestrel()
+          .UseContentRoot(Directory.GetCurrentDirectory())
+          .UseIISIntegration()
+          .UseStartup<Startup>()
+          .Build();
+
+        host.Run();
+      }
+
       Car volkswagen = new Car("1974 Volkswagen Thing", 1100, 368792);
       Car yugo = new Car("1980 Yugo Koral", 700, 56000);
       Car ford = new Car("1988 Ford Country Squire", 1400, 239001);
