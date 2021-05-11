@@ -30,34 +30,34 @@ namespace Dealership.Models
     {
       _carList.Clear();
     }
-    public string GetMakeModel()
-    {
-      return MakeModel;
-    }
+    // public string GetMakeModel()
+    // {
+    //   return MakeModel;
+    // }
 
-    public int GetPrice()
-    {
-      return Price;
-    }
+    // public int GetPrice()
+    // {
+    //   return Price;
+    // }
 
-    public void SetPrice(int newPrice)
-    {
-      Price = newPrice;
-    }
+    // public void SetPrice(int newPrice)
+    // {
+    //   Price = newPrice;
+    // }
 
-    public int GetMiles()
-    {
-      return Miles;
-    }
+    // public int GetMiles()
+    // {
+    //   return Miles;
+    // }
 
-    public bool WorthBuying(int maxPrice)
-    {
-      return (Price <= maxPrice);
+    // public bool WorthBuying(int maxPrice)
+    // {
+    //   return (Price <= maxPrice);
 
-    }
-    public static string MakeSound(string sound)
-    {
-      return "Our cars sound like " + sound;
-    }
+    // }
+    // public static string MakeSound(string sound)
+    // {
+    //   return "Our cars sound like " + sound;
+    // }
   }
 }
